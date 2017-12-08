@@ -425,8 +425,8 @@ def handle_renewal_request(config):
                     main.renew_cert(lineage_config, plugins, renewal_candidate)
                     renew_successes.append(renewal_candidate.fullchain)
                 else:
-                    expiry = crypto_util.notAfter(lineage_config.version(
-                        "cert", lineage_config.latest_common_version()))
+                    expiry = crypto_util.notAfter(renewal_candidate.version(
+                        "cert", renewal_candidate.latest_common_version()))
                     renew_skipped.append("%s expires on %s", renewal_candidate.fullchain,
                                          expiry.strftme("%Y-%m-%d"))
         except Exception as e:  # pylint: disable=broad-except
