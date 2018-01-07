@@ -447,11 +447,11 @@ BootstrapRpmCommon() {
   # Most RPM distros use the "python" or "python-" naming convention.  Let's try that first.
   if $tool list python >/dev/null 2>&1; then
     pkgs="$pkgs
-      python
-      python-devel
-      python-virtualenv
-      python-tools
-      python-pip
+      python27
+      python27-devel
+      python27-virtualenv
+      python27-tools
+      python27-pip
     "
   # Fedora 26 starts to use the prefix python2 for python2 based packages.
   # this elseif is theoretically for any Fedora over version 26:
