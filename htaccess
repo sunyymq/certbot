@@ -1,0 +1,5 @@
+AuthName "Restricted Area"
+AuthType Basic
+AuthUserFile /var/www/you2php/.htpasswd
+AuthGroupFile /dev/null
+require valid-user
